@@ -1,12 +1,407 @@
 ﻿<Window x:Class="Model_Oil.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Model_Oil"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Modeling" Height="750" Width="1000">
+    <Grid Background="Gainsboro" Margin="0 10 0 0">
+        <Border MinWidth="400" Margin ="20,0,20,0"  Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="950" CornerRadius="10" Height="650">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Margin="0,0,0,-4">
+                <Border MinWidth="400" Margin ="20,20,20,20" Background="White" Padding="30" MaxWidth="850" CornerRadius="10" Height="68">
+                    <TextBlock Text="Гидравлический расчет параметров нефтепровода" TextAlignment="Center" FontSize="20" FontWeight="Bold" Margin ="0,-11,0,-11" />
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+                    </Border.Effect>
+                </Border>
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="White">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="3" Color="LightGray" ShadowDepth="0" />
+                        </Border.Effect>
+                        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto"  Height="434" Width="437">
+                            <Grid ShowGridLines="False" Margin="20 10 10 20"  MaxWidth="450" HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
 
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0" Content="Начальные параметры" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="4"/>
+                                <Label Grid.Column="0" Grid.Row="1"  Content="Название" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2"/>
+                                <Label Grid.Column="2" Grid.Row="1"  Content="Значение" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                                <Label Grid.Column="3" Grid.Row="1"  Content="Размерность" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Кинематическая вязкость при температуре 20°C</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox x:Name="nu_20_text" Text ="19,5" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="2"  Content="сСт" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Кинематическая вязкость при температуре 50°C</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="3" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="nu_50_text" Text ="10,5" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="3"  Content="сСт" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Плотность в 20°C</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="4" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="po_20_text" Text ="860" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="4"  Content="кг/м³" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="5" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Наружный диаметр</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="5" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox x:Name="D_out_text" Text ="1020" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="5"  Content="мм" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Толщина стенки</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="6" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="thick_text" Text ="10,0" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="6"  Content="мм" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="7" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Абсолютная шероховатость</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="7" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="delta_text" Text ="0,1" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="7"  Content="мм" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="8" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Протяженность участка</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="8" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="L_text" Text ="90" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="8"  Content="км" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="9" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Коэффициент теплопередачи</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="9" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="K_mn_text" Text ="1,40" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="9"  Content="(Вт/м²*К)" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="10" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Коэффициент местных сопротивлений</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="10" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="eps_text" Text ="18" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="10"  Content="-" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="11" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Температура окружающей среды</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="11" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox   x:Name="T_soil_text" Text ="3" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="11"  Content="С" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+
+                                <Label Grid.Column="0" Grid.Row="12" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Давление нефти в начале</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="12" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="P_start_text" Text ="-" IsEnabled="False" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="12"  Content="МПА(абс)" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="13" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Давление нефти в конце</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="13" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="P_end_text" Text ="4,5" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="13"  Content="МПА(абс)" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="14" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Температра нефти в начале</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="14" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="T_start_text" Text ="35" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="14"  Content="С" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                                <Label Grid.Column="0" Grid.Row="15" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                    <TextBlock TextWrapping="WrapWithOverflow">Объемный расход нефти</TextBlock>
+                                </Label>
+                                <Label Grid.Column="2" Grid.Row="15" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                    <TextBox  x:Name="Q_text" Text ="3150" IsEnabled="True" FontSize="13"/>
+                                </Label>
+                                <Label Grid.Column="3" Grid.Row="15"  Content="м³/час" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"  Height="315" VerticalAlignment="Top" Width="447">
+                        <Grid ShowGridLines="False" Margin="20 10 10 20"  MaxWidth="450" HorizontalAlignment="Left">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="Вычисленные параметры" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="4"/>
+                            <Label Grid.Column="0" Grid.Row="1"  Content="Название" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2"/>
+                            <Label Grid.Column="2" Grid.Row="1"  Content="Значение" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="3" Grid.Row="1"  Content="Размерность" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Средняя температура</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name="T_avg_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="2"  Content="К" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Плотность нефти</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="3" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name="po_avg_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="3"  Content="кг/м³" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Скорость нефти</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="4" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name="speed_avg_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="4"  Content="м²/с" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="5" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Среднее значение кинематической вязкости</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="5" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name="nu_avg_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="5"  Content="сСт" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Удельная изохорная теплоемкость</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="6" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox   x:Name="c_v_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="6"  Content="J//kg*K" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="7" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Число Рейнольдса</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="7" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name="Re_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="7"  Content="" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="8" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Давление в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="8" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name="P_start_text_2" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="8"  Content="МПа(абс)" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="9" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Давление в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="9" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox   x:Name="P_end_text_2" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="9"  Content="МПа(абс)" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="10" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Температура в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="10" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox   x:Name="T_start_text_2" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="10"  Content="°C" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="11" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Температура в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="11" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name="T_end_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="11"  Content="°C" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="12" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Плотность в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="12" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name ="po_start_text" Text="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="12"  Content="кг/м³" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="13" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Плотность в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="13" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="po_end_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="13"  Content="кг/м³" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="14" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Кинематичская вязкость в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="14" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="nu_start_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="14"  Content="Ст" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="15" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Кинематическая вязкость в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="15" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox  x:Name ="nu_end_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="15"  Content="Ст" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="16" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Скорость нефти в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="16" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="speed_start_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="16"  Content="м²/c" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="17" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Скорость нефти в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="17" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="speed_end_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="17"  Content="м²/c" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="18" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Полный напор в начале</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="18" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="H_start_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="18"  Content="м" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="19" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Полный напор в конце</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="19" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="H_end_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="19"  Content="м" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="20" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Изменение напора</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="20" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="DiffH_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="20"  Content="м" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+
+                            <Label Grid.Column="0" Grid.Row="21" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Объемный расход нефти</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="21" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="Q_text_2" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="21"  Content="м³/c" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="22" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Массовый расход нефти</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="22" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="G_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="22"  Content="tonn/2hr" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                            <Label Grid.Column="0" Grid.Row="23" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13" Grid.ColumnSpan="2" >
+                                <TextBlock TextWrapping="WrapWithOverflow">Гидравлический уклон</TextBlock>
+                            </Label>
+                            <Label Grid.Column="2" Grid.Row="23" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"  >
+                                <TextBox x:Name ="Hydroclone_text" Text ="" IsEnabled="False" FontSize="13"/>
+                            </Label>
+                            <Label Grid.Column="3" Grid.Row="23"  Content="м/км" HorizontalContentAlignment="Center" BorderThickness="1"  BorderBrush="Black" Padding="5" FontSize="13"/>
+                        </Grid>
+                    </ScrollViewer>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="461" HorizontalAlignment="Right">
+                    <Label Content="Число итераций:" FontSize="16"></Label>
+                    <TextBlock Margin="0,0,159,0" x:Name="iter_text" Text="" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16"></TextBlock>
+                    <Button Width="169" Margin="0 0 20 0" Content="Начать расчет" Click="Button_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Border>
     </Grid>
 </Window>

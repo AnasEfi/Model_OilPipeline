@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3nh9yQHhd12K9QjaemeoZTvnB6vyb3PaXV8+bkQtuyJF8rIQ0XevK6bGTrQsESLY5cYGHbGRgr86jYYuGtA04g==",
+  "dgSpecHash": "CLh2YVME7HY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\Model_Oil.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Anastasya\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\Anastasya\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\Anastasya\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

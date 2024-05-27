@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|c:\\users\\anastasya\\source\\repos\\model_oil\\model_oil\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|c:\\users\\anastasya\\source\\repos\\model_oil\\model_oil\\modelequation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\modelequation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|c:\\users\\anastasya\\source\\repos\\model_oil\\model_oil\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\model_oil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\model_oil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\model_oil\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B499A172-7C4C-49A2-837A-99D0AE128622}|Model_Oil\\Model_Oil.csproj|solutionrelative:model_oil\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +43,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Model_Oil\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\MainWindow.xaml",
-              "RelativeToolTip": "Model_Oil\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-03T12:07:59.938Z",
+              "Title": "ModelEquation.cs",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\ModelEquation.cs",
+              "RelativeDocumentMoniker": "Model_Oil\\ModelEquation.cs",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\ModelEquation.cs",
+              "RelativeToolTip": "Model_Oil\\ModelEquation.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAtwMoAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:36:29.233Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Model_Oil\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\AssemblyInfo.cs",
+              "RelativeToolTip": "Model_Oil\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T02:01:44.831Z"
             },
             {
               "$type": "Document",
@@ -40,14 +77,55 @@
               "RelativeDocumentMoniker": "Model_Oil\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\MainWindow.xaml.cs",
               "RelativeToolTip": "Model_Oil\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAAC4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:07:53.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T12:07:53.549Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Model_Oil\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\App.xaml.cs",
+              "RelativeToolTip": "Model_Oil\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:36:50.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Model_Oil\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\MainWindow.xaml",
+              "RelativeToolTip": "Model_Oil\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-03T12:07:59.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model_Oil",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\Model_Oil.csproj",
+              "RelativeDocumentMoniker": "Model_Oil\\Model_Oil.csproj",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\Model_Oil.csproj",
+              "RelativeToolTip": "Model_Oil\\Model_Oil.csproj",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-06T08:34:15.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\App.xaml",
+              "RelativeDocumentMoniker": "Model_Oil\\App.xaml",
+              "ToolTip": "C:\\Users\\Anastasya\\source\\repos\\Model_Oil\\Model_Oil\\App.xaml",
+              "RelativeToolTip": "Model_Oil\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-03T14:05:32.088Z"
             }
           ]
         }
